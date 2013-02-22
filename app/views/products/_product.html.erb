@@ -1,0 +1,14 @@
+<div class="product">
+  <img src="<%= product.image_url%>">
+  <h2><%= product.name %></h2>
+  <h4><%= product.price / 100.to_f %></h4>
+  <%= button_to "Add To Cart",
+    user_cart_products_path(User.first, product_id: product.id),
+    remote: true %>
+</div>
+
+<script type="text/javascript">
+  $(
+    $('form.button_to').on('ajax:success', cartController.handleAddToCart)
+  )
+</script>
