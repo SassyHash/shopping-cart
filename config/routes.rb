@@ -1,5 +1,5 @@
 Store::Application.routes.draw do
-
+  resources :sessions, only: [:create, :new, :destroy]
   resources :products
   resources :users do
     resource :cart

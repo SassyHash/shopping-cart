@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
-//= require globals
 //= require_tree .
 
-cartController = new Store.CartController();
+cc = new Store.CartController();
